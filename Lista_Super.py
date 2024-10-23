@@ -4,7 +4,6 @@ import os
 #import kivy 
 #from kivy.app import App
 
-
 def suma_productos(orden, costo ):
     opp = 0 
     suma = 0 
