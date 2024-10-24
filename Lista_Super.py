@@ -12,7 +12,7 @@ def suma_productos(orden, costo ):
             print("ingrese 's' para ingresar los productos\nIngrese 'n' para salir")
             opp=input()
             if opp not in ['s', 'n']:
-                raise ValueError('Debes ingresar un numero de un digito.')
+                raise ValueError('Debes ingresar (s/n).')
             if opp =='s':
                 while opp !='n':
                     print('Ingresa el nombre del producto: ')
@@ -44,17 +44,43 @@ def suma_productos(orden, costo ):
                 print("Opcion no valida\nIngrese 's' para continuar o 'n' para salir.")
         except ValueError as e:
             print(f'ERROR: {e}')
-    os.system("clear")
-    print('---------------------------\n')
-    for producto in orden:
-        print('Producto: '+producto)
-    print('---------------------------')
-    for articulo in costo: 
-        print('costo: $',articulo)
-        suma += articulo 
-    print('---------------------------')
-    print('Total: $',suma)
-    print('\n---------------------------')
+
+    print("Desea ingresar verduras? (s/n)")
+    ver = 0
+    while ver != ['s','n']:
+        try:
+            ver= input()
+            if ver not in ['s','n']:
+                raise ValueError ('Debes ingresar (s/n)')
+            if ver == 'n':
+                os.system("clear")
+                print('---------------------------\n')
+                for producto in orden:
+                    print('Producto: '+producto)
+                print('---------------------------')
+                for articulo in costo: 
+                    print('costo: $',articulo)
+                    suma += articulo 
+                print('---------------------------') 
+                print('Total: $',suma)
+                print('\n---------------------------')
+            elif ver =='s':
+                verduras_frutas(orden, costo)
+            else: 
+                 print('Opcion no valida, ingresa (s/n)')
+        except ValueError as e:
+            print(f'Error: {e}')
+        
+    
+
+
+def verduras_frutas(orden, costo):
+    #tenemos que hacer que te ponga el precio de las verduras.
+    Opp = input("Ingresa 's' para seguir anotando\nIngresa 'n' para salir") 
+    while Opp != 'n':
+        print('Ingresa el nombre de la verdura: ')
+        orden.append(input())
+
 
 def main():
     os.system("clear")
