@@ -19,6 +19,7 @@ def suma_productos(orden, costo ):
                     orden.append(input())
                     bin = False
                     while bin==False: 
+                        # falta hacer que solo acepte int
                         print('Ingresa el costo del articulo que acabas de ingresar: ')
                         costo.append(int(input()))
                         print('Ingrese 1 para afirmar que ese es el precio.\nCualquier otro numero si no es el correcto.')
@@ -65,19 +66,37 @@ def suma_productos(orden, costo ):
                 print('Total: $',suma)
                 print('\n---------------------------')
             elif ver =='s':
-                verduras_frutas(orden, costo)
+                print('Seguira...')
+                #verduras_frutas(orden, costo)
             else: 
                  print('Opcion no valida, ingresa (s/n)')
         except ValueError as e:
             print(f'Error: {e}')
-        
-    
 
 
-def verduras_frutas(orden, costo):
+#def verduras_frutas(orden, costo):
     #tenemos que hacer que te ponga el precio de las verduras.
-    Opp = input("Ingresa 's' para seguir anotando\nIngresa 'n' para salir") 
-    while Opp != 'n':
+#    Opp = 0
+#    while Opp != 'n':
+#        try: 
+#            print("Deseas seguir? (s/n)")
+#            Opp = (input())
+#            if Opp not in ['s','n']:
+#                raise ValueError ('Debes ingresar (s/n)')
+#            if Opp == 's':
+#                while Opp !='n': 
+#                    print('Ingresa el nombre del producto: ')
+#                    orden.append(input())
+#                    bin = False 
+#                    while bin == False: 
+#                        precio_kilo = input('Ingrese el costo por kilo del articulo: ')
+#                        peso = input('Ingrese el peso de su articulo')
+#                        total= 1
+
+
+                        
+
+
         print('Ingresa el nombre de la verdura: ')
         orden.append(input())
 
