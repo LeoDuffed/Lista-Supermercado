@@ -1,5 +1,5 @@
 # Hacer un programa que funcione con arreglos.
-# 
+
 import os
 #import kivy 
 #from kivy.app import App
